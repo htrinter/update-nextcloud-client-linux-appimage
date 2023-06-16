@@ -4,7 +4,7 @@
 INSTALL_PATH="$HOME/.local/bin/Nextcloud.AppImage"
 
 # GitHub API URL
-API_URL="https://api.github.com/repos/nextcloud/desktop/releases/latest"
+API_URL="https://api.github.com/repos/nextcloud-releases/desktop/releases/latest"
 
 echo "Retrieving download URL of the latest version"
 download_url=$(curl -sSL "$API_URL" | jq -r '.assets[] | select(.name | endswith(".AppImage")) | .browser_download_url')
